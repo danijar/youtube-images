@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "YouTube Images",
+	"short_name": "YouTube Images",
+	"description": "Get high resolution YouTube thumbnail of the current video from context menu.",
+	"version": "1.0.0",
+	"author": "Danijar Hafner",
+	"permissions": [
+	 	"contextMenus"
+	],
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [{
+		"matches": ["*://www.youtube.com/watch?*"],
+		"js": ["content_script.js"]
+	}]
+}
